@@ -1,0 +1,28 @@
+@base <https://djradon.github.io/ns/> .
+@prefix ko: <https://kosmion.github.io/ns/ontology/> .
+@prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> . 
+
+# highlights from the current default named graph 
+pav:importedFrom <_default/v1> .
+
+# highlights from the current catalog named graph
+pav:importedFrom <_catalog/v1> .
+
+<_catalog/v1> {
+    <> sflo:catalogSeries <_catalog> ;
+        sflo:defaultDatasetSeries <_default> ;
+        sflo:hasTrigDistribution <ns.trig> ;
+        sflo:hasJsonldDistribution <ns.jsonld> ;
+        .
+    
+    <_catalog> a dcat:Catalog, dcat:DatasetSeries ;
+        dcat:dataset <_default/v1> ;
+        .
+
+    <_default/v1> a dcat:Dataset ;
+    sflo:hasTrigDistribution <_default/v1/ns-default.trig> ;
+}
+
+
