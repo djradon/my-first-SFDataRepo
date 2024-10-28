@@ -1,4 +1,4 @@
-@base <https://djradon.github.io/ns/> .
+@base <https://djradon.github.io/ns/d/> .
 @prefix ko: <https://kosmion.github.io/ns/ontology/> .
 @prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
 @prefix pav: <http://purl.org/pav/> .
