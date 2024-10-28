@@ -4,10 +4,9 @@
 @prefix pav: <http://purl.org/pav/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> . 
 
-<> sflo:catalogSeries <_catalog> ;
-    sflo:defaultDatasetSeries <_default> ;
-    sflo:hasTrigDistribution <ns.trig> ;
-    sflo:hasJsonldDistribution <ns.jsonld> ;
+<> sflo:hasCatalogSeries <_catalog> ;
+    sflo:hasDefaultDatasetSeries <_default> ;
+    sflo:hasTrigDistribution <index.trig> ;
     .
 
 <_catalog> a sflo:CatalogSeries ;

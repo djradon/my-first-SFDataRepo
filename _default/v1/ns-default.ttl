@@ -5,6 +5,6 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> . 
 
 <> a sflo:Namespace ;
-    rdfs:label "djradon's first namespace";
-    
+    dcterms:title "djradon's first namespace" ;
+    dcterms:description "This namespace adheres to the Semantic Flow design pattern, and was actually used to develop the pattern." ;
     .

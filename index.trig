@@ -4,25 +4,32 @@
 @prefix pav: <http://purl.org/pav/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> . 
 
-# highlights from the current default named graph 
-pav:importedFrom <_default/v1> .
+# highlights from the current "default dataset"
 
-# highlights from the current catalog named graph
-pav:importedFrom <_catalog/v1> .
+<_default/v1> {
+    <> a sflo:Namespace ;
+        dcterms:title "djradon's first namespace" ;
+        .
+}
+
+
+
+# highlights from the current catalog 
 
 <_catalog/v1> {
-    <> sflo:catalogSeries <_catalog> ;
-        sflo:defaultDatasetSeries <_default> ;
-        sflo:hasTrigDistribution <ns.trig> ;
-        sflo:hasJsonldDistribution <ns.jsonld> ;
+    <>  sflo:hasCatalogSeries <_catalog> ;
+        sflo:hasDefaultDatasetSeries <_default> ;
         .
     
-    <_catalog> a dcat:Catalog, dcat:DatasetSeries ;
-        dcat:dataset <_default/v1> ;
+    <_catalog> a sflo:CatalogSeries ;
+        pav:hasCurrentVersion <_catalog/v1> ;
+
+    <_catalog/v1> a dcat:Catalog, dcat:Dataset ;
+        sflo:hasTrigDistribution <_catalog/v1/ns-catalog.trig> ;
         .
 
     <_default/v1> a dcat:Dataset ;
-    sflo:hasTrigDistribution <_default/v1/ns-default.trig> ;
+        sflo:hasTrigDistribution <_default/v1/ns-default.trig> ;
 }
 
 
