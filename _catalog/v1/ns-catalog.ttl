@@ -16,6 +16,7 @@
 
 <_catalog/v1> a dcat:Catalog, dcat:Dataset ;
     sflo:hasTrigDistribution <_catalog/v1/ns-catalog.trig> ;
+    .
 
 <_default> a dcat:DatasetSeries ;
     pav:hasCurrentVersion <_default/v1> ;
@@ -24,3 +25,7 @@
 
 <_default/v1> a dcat:Dataset ;
     sflo:hasTrigDistribution <_default/v1/ns-default.trig> ;
+    .
+
+
+    

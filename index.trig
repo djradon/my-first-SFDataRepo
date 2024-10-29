@@ -3,6 +3,7 @@
 @prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> . 
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 # highlights from the current "default dataset"
 
@@ -23,6 +24,7 @@
     
     <_catalog> a sflo:CatalogSeries ;
         pav:hasCurrentVersion <_catalog/v1> ;
+        .
 
     <_catalog/v1> a dcat:Catalog, dcat:Dataset ;
         sflo:hasTrigDistribution <_catalog/v1/ns-catalog.trig> ;
@@ -30,6 +32,7 @@
 
     <_default/v1> a dcat:Dataset ;
         sflo:hasTrigDistribution <_default/v1/ns-default.trig> ;
+        .
 }
 
 

@@ -3,6 +3,7 @@
 @prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> . 
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 <> a sflo:Namespace ;
     dcterms:title "djradon's first namespace" ;
