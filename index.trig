@@ -1,38 +1,19 @@
 @base <https://djradon.github.io/ns/d/> .
-@prefix ko: <https://kosmion.github.io/ns/ontology/> .
 @prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
-@prefix pav: <http://purl.org/pav/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> . 
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-# highlights from the current "default dataset"
+# import all data from the current "default dataset" distribution
 
-<_default/v1> {
-    <> a sflo:Namespace ;
-        dcterms:title "djradon's first namespace" ;
-        .
-}
+<> a owl:NamedIndividual ;
 
+    # default dataset
+    sflo:has_default_dataset_series <_default> ;
+    sflo:has_current_default_dataset_trig_distribution <_default/current/d-default.trig> ;
 
+    # default catalog
+    sflo:has_default_catalog_series <_catalog> ;
+    sflo:has_current_default_catalog_trig_distribution <_catalog/current/d-catalog.trig> ;
 
-# highlights from the current catalog 
-
-<_catalog/v1> {
-    <>  sflo:hasCatalogSeries <_catalog> ;
-        sflo:hasDefaultDatasetSeries <_default> ;
-        .
-    
-    <_catalog> a sflo:CatalogSeries ;
-        pav:hasCurrentVersion <_catalog/v1> ;
-        .
-
-    <_catalog/v1> a dcat:Catalog, dcat:Dataset ;
-        sflo:hasTrigDistribution <_catalog/v1/ns-catalog.trig> ;
-        .
-
-    <_default/v1> a dcat:Dataset ;
-        sflo:hasTrigDistribution <_default/v1/ns-default.trig> ;
-        .
-}
+    .
 
 
