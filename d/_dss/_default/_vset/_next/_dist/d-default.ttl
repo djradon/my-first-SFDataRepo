@@ -1,0 +1,11 @@
+@base <https://djradon.github.io/ns/d/> .
+@prefix ko: <https://kosmion.github.io/ns/ontology/> .
+@prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> . 
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a sflo:Namespace ;
+    dcterms:title "djradon's first namespace" ;
+    dcterms:description "This namespace adheres to the Semantic Flow design pattern, and was actually used to develop the pattern." ;
+    .

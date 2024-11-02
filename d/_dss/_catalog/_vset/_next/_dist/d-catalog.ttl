@@ -1,0 +1,37 @@
+@base <https://djradon.github.io/ns/d/> .
+@prefix ko: <https://kosmion.github.io/ns/ontology/> .
+@prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> . 
+
+
+<_catalog> a sflo:DefaultCatalogSeries ; # redundant but helpful
+    sflo:has_current_DefaultCatalogSeriesDataset <_catalog/_vset> ;
+    sflo:has_default_catalog <_catalog/v1> ;
+    .
+
+<_catalog/current> a sflo:CurrentCatalog ; # redundant
+    sflo:has_trig_distribution <_catalog/current/d-catalog.trig> ;
+    sflo:current_default_catalog_for <> ;
+    .
+
+<_catalog/v1> a sflo:Catalog ; # redundant from 
+    sflo:has_trig_distribution <_catalog/current/d-catalog-v1.trig> ;
+    sflo:default_catalog_for <> ;
+    .
+
+<_default> a sflo:DefaultDatasetSeries ;
+    sflo:has_latest_default_dataset <_default/latest> ;
+    sflo:has_current_default_dataset <_default/v2> ;
+    sflo:has_default_dataset <_default/v1> ;
+    .
+
+<_default/latest> a sflo:CurrentDefaultDataset ;
+    sflo:has_trig_distribution <_default/current/d-default.trig> ;
+    sflo:current_default_dataset_for <> ;
+    .
+
+<_default/v1> a sflo:DefaultDataset ;
+    sflo:has_trig_distribution <_default/v1/d-default-v1.trig> ;
+    sflo:default_dataset_for <> ; 
+    .

@@ -1,0 +1,18 @@
+@base <https://djradon.github.io/ns/d/> .
+@prefix sflo: <https://semanticflow.github.io/ns/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<> a sflo:Namespace ;
+
+    # default dataset series
+    sflo:has_default_dataset_series <_default> ;
+
+    # default catalog series
+    sflo:has_default_catalog_series <_catalog> ;
+
+    # additonal series could be added here
+
+    .
+
+# potentially any unversioned statements could be added here
+
